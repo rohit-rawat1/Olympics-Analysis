@@ -6,7 +6,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.figure_factory as ff
 
-df = pd.read_csv('athlete_events.csv')
+df1=pd.read_csv('athlete_events_1.csv')
+df2=pd.read_csv('athlete_events_2.csv')
+df = pd.concat([df1, df2])
 region_df = pd.read_csv('noc_regions.csv')
 
 df = preprocessor.preprocess(df,region_df)
